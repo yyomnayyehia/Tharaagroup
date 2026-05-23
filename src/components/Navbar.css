@@ -8,6 +8,12 @@
   background: transparent;
 }
 
+.navbar.menu-open {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
 .navbar.scrolled {
   background: rgba(30, 58, 95, 0.96);
   padding: 12px 0;
@@ -102,7 +108,7 @@
   position: fixed;
   inset: 0;
   background: var(--color-primary);
-  z-index: 999;
+  z-index: 1100;  /* above navbar (1000) and everything else */
   flex-direction: column;
   align-items: center;
   justify-content: center;
