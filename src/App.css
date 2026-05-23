@@ -1,0 +1,15 @@
+/* Application layout wrapper */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Prevent horizontal scroll */
+.app-wrapper, body {
+  overflow-x: hidden;
+}
