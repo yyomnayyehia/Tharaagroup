@@ -255,4 +255,11 @@
   .footer-links-grid { grid-template-columns: 1fr 1fr; }
   .footer-bar-inner { flex-direction: column; gap: var(--spacing-xs); text-align: center; }
   .contact-form-col { padding: var(--spacing-xl) var(--spacing-lg); }
+  .form-submit { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .contact-form-col { padding: var(--spacing-lg) var(--spacing-md); }
+  .footer-links-grid { grid-template-columns: 1fr; }
+  .footer-bar-links { flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
 }

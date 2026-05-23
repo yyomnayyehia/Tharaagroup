@@ -166,13 +166,41 @@
 
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 768px) {
-  .hero-stats-inner { flex-wrap: wrap; gap: var(--spacing-sm); }
-  .hero-stat { padding: 0 !important; border: none !important; }
+  .hero {
+    /* background-attachment: fixed causes bugs on iOS Safari */
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    padding-top: calc(var(--spacing-xxl) + 20px);
+  }
+
+  .hero-text-block {
+    max-width: 100%;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-stats-inner {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .hero-stat {
+    padding: 0 !important;
+    border: none !important;
+    min-width: 40%;
+  }
+
   .scroll-hint { display: none; }
   .hero-breadcrumb { display: none; }
 }
 
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; }
-  .hero-actions a { text-align: center; }
+  .hero-actions a { text-align: center; width: 100%; }
+  .hero-stats-inner { justify-content: center; }
+  .hero-stat { min-width: 45%; }
 }

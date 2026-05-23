@@ -159,5 +159,20 @@
 
   .service-inner {
     padding: var(--spacing-xl) var(--spacing-lg);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-img-wrapper {
+    min-height: 240px;
+  }
+
+  .service-inner {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .service-number {
+    font-size: clamp(48px, 14vw, 72px);
   }
 }

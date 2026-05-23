@@ -292,5 +292,13 @@
 
 @media (max-width: 600px) {
   .pg-grid { grid-template-columns: 1fr; }
-  .projects-hero { padding: 140px 0 60px; }
+  .projects-hero { padding: 130px 0 60px; }
+  .pg-filters { gap: 6px; }
+  .pg-filter-btn { padding: 7px 12px; font-size: 10px; }
+}
+
+@media (max-width: 480px) {
+  .projects-hero { padding: 110px 0 48px; }
+  .projects-hero::after { display: none; }
+  .projects-main-section { padding: var(--spacing-xl) 0 var(--spacing-xxl); }
 }
