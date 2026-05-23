@@ -55,55 +55,58 @@ const Navbar = ({ forceDark = false }) => {
   const isDark = scrolled || forceDark;
 
   return (
-    <nav
-      className={`navbar ${isDark ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div className="container navbar-content">
-        <Link to="/" className="logo-link" aria-label="Tharaa Real Estate — Home">
-          <img src={logoImg} alt="Tharaa Real Estate Logo" className="logo-img" />
-        </Link>
+    <>
+      <nav
+        className={`navbar ${isDark ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div className="container navbar-content">
+          <Link to="/" className="logo-link" aria-label="Tharaa Real Estate — Home">
+            <img src={logoImg} alt="Tharaa Real Estate Logo" className="logo-img" />
+          </Link>
 
-        {/* Desktop Links */}
-        <ul className="nav-links" role="list">
-          {navLinks.map(({ href, label, id }) => (
-            <li key={id}>
+          {/* Desktop Links */}
+          <ul className="nav-links" role="list">
+            {navLinks.map(({ href, label, id }) => (
+              <li key={id}>
+                <a
+                  href={`/#${href}`}
+                  className={`nav-link ${isHome && activeSection === id ? 'active' : ''} ${!isHome && href === 'projects' ? 'active' : ''}`}
+                  onClick={(e) => handleAnchorClick(e, href)}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+            <li>
               <a
-                href={`/#${href}`}
-                className={`nav-link ${isHome && activeSection === id ? 'active' : ''} ${!isHome && href === 'projects' ? 'active' : ''}`}
-                onClick={(e) => handleAnchorClick(e, href)}
+                href="/#contact"
+                className="btn-primary nav-cta"
+                id="nav-contact-btn"
+                onClick={(e) => handleAnchorClick(e, 'contact')}
               >
-                {label}
+                Contact Us
               </a>
             </li>
-          ))}
-          <li>
-            <a
-              href="/#contact"
-              className="btn-primary nav-cta"
-              id="nav-contact-btn"
-              onClick={(e) => handleAnchorClick(e, 'contact')}
-            >
-              Contact Us
-            </a>
-          </li>
-        </ul>
+          </ul>
 
-        {/* Mobile Hamburger */}
-        <button
-          className={`hamburger ${menuOpen ? 'is-open' : ''}`}
-          aria-expanded={menuOpen}
-          aria-label="Toggle navigation menu"
-          onClick={() => setMenuOpen((o) => !o)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+          {/* Mobile Hamburger — stays inside nav so it's above the drawer */}
+          <button
+            className={`hamburger ${menuOpen ? 'is-open' : ''}`}
+            style={{ position: 'relative', zIndex: 1200 }}
+            aria-expanded={menuOpen}
+            aria-label="Toggle navigation menu"
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer — rendered OUTSIDE <nav> so z-index is not trapped */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} aria-hidden={!menuOpen}>
         <ul role="list">
           {navLinks.map(({ href, label, id }) => (
@@ -128,7 +131,7 @@ const Navbar = ({ forceDark = false }) => {
           </li>
         </ul>
       </div>
-    </nav>
+    </>
   );
 };
 
