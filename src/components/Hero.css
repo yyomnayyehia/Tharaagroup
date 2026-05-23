@@ -167,12 +167,13 @@
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 768px) {
   .hero {
-    /* background-attachment: fixed causes bugs on iOS Safari */
     background-attachment: scroll;
   }
 
   .hero-content {
     padding-top: calc(var(--spacing-xxl) + 20px);
+    /* Extra bottom padding so buttons don't hide behind the stats bar */
+    padding-bottom: 180px;
   }
 
   .hero-text-block {
@@ -199,6 +200,9 @@
 }
 
 @media (max-width: 480px) {
+  .hero-content {
+    padding-bottom: 200px;
+  }
   .hero-actions { flex-direction: column; }
   .hero-actions a { text-align: center; width: 100%; }
   .hero-stats-inner { justify-content: center; }
