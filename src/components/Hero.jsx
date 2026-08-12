@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css';
-import heroBg from '../assets/enhanced.png';
+import heroBg from '../assets/enhanced.webp';
 
 
 
@@ -15,7 +15,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={ref} className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
+    <section ref={ref} className="hero" style={{ backgroundImage: `url(${heroBg})` }} aria-label="Hero Section">
       <div className="hero-overlay"></div>
 
       {/* Vertical Right Element */}

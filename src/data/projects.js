@@ -1,12 +1,12 @@
-import proj1 from '../assets/project_1.png';
-import proj2 from '../assets/project_2.png';
-import proj3 from '../assets/project_3.png';
-import marseiliaImg from '../assets/marseilia_beach_4.jpg';
-import blueBlueImg from '../assets/BlueBlue.png';
-import marassiImg from '../assets/Marassi.png';
-import marinaImg from '../assets/Marina View.png';
-import panoramaImg from '../assets/Panorama.png';
-import alexPortImg from '../assets/Alex Port.png';
+import proj1 from '../assets/project_1.webp';
+import proj2 from '../assets/project_2.webp';
+import proj3 from '../assets/project_3.webp';
+import marseiliaImg from '../assets/marseilia_beach_4.webp';
+import blueBlueImg from '../assets/BlueBlue.webp';
+import marassiImg from '../assets/Marassi.webp';
+import marinaImg from '../assets/Marina View.webp';
+import panoramaImg from '../assets/Panorama.webp';
+import alexPortImg from '../assets/Alex Port.webp';
 
 export const allProjects = [
   {

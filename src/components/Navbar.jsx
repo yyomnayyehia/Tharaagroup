@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 
-const Navbar = ({ forceDark = false }) => {
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -53,7 +53,7 @@ const Navbar = ({ forceDark = false }) => {
     { href: 'testimonials',  label: 'Testimonials',  id: 'testimonials' },
   ];
 
-  const isDark = scrolled || forceDark;
+  const isDark = scrolled || !isHome;
 
   return (
     <>

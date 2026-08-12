@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { allProjects, categories } from '../data/projects';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import './ProjectsPage.css';
 
 const ProjectsPage = () => {
@@ -23,8 +21,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="app-wrapper">
-      <Navbar forceDark />
-      <main>
+      <div className="projects-page-content">
         {/* ── Page Hero ─────────────────────────── */}
         <section className="projects-hero">
           <div className={`projects-hero-inner ${visible ? 'visible' : ''}`}>
@@ -122,8 +119,7 @@ const ProjectsPage = () => {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
+      </div>
     </div>
   );
 };

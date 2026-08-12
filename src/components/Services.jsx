@@ -1,7 +1,7 @@
 import React from 'react';
 import './Services.css';
-import serviceInterior from '../assets/service_interior.png';
-import serviceArchitecture from '../assets/arch.png';
+import serviceInterior from '../assets/service_interior.webp';
+import serviceArchitecture from '../assets/arch.webp';
 
 const services = [
   {
@@ -24,7 +24,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="services-section">
+    <section id="services" className="services-section" aria-label="Our Services">
       {/* Section Header */}
       <div className="container services-header">
         <span className="section-label">What We Offer</span>
