@@ -82,8 +82,10 @@ const Process = () => {
                 <div className="process-icon-wrapper">
                   {step.icon}
                 </div>
-                <h3 className="heading-2 process-step-title">{step.title}</h3>
-                <p className="body-small process-step-desc">{step.description}</p>
+                <div className="process-text-content">
+                  <h3 className="heading-2 process-step-title">{step.title}</h3>
+                  <p className="body-small process-step-desc">{step.description}</p>
+                </div>
               </div>
             ))}
           </div>

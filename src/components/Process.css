@@ -81,7 +81,15 @@
 /* ── Responsive ── */
 @media (max-width: 992px) {
   .process-timeline-line {
-    display: none;
+    top: 40px;
+    bottom: 40px;
+    left: 40px; /* Center of the 80px icon wrapper */
+    right: auto;
+    width: 2px;
+    height: auto;
+    background-image: linear-gradient(to bottom, var(--color-accent) 50%, transparent 50%);
+    background-size: 2px 16px;
+    background-repeat: repeat-y;
   }
   
   .process-steps-grid {
@@ -92,13 +100,16 @@
   }
   
   .process-step {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
   }
   
   .process-icon-wrapper {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 0;
+    margin-right: var(--spacing-lg);
+    flex-shrink: 0;
   }
   
   .process-step-title {

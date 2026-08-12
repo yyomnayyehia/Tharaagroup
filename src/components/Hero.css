@@ -254,7 +254,10 @@
   }
 
   .hero-vertical-accent {
-    display: none;
+    display: flex;
+    right: var(--spacing-sm);
+    transform: translateY(-50%) scale(0.85);
+    transform-origin: right center;
   }
 
   .hero-subtitle {
