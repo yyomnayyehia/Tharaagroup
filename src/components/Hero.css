@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   background-size: cover;
   background-position: center 70%;
   background-attachment: fixed;
@@ -64,7 +65,6 @@
 
 
 /* Entrance animation */
-.hero .hero-label,
 .hero .hero-title,
 .hero .hero-subtitle,
 .hero .hero-actions {
@@ -73,10 +73,9 @@
   transition: opacity 1s ease, transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.hero-loaded .hero-label { opacity:1; transform:none; transition-delay:0.1s; }
-.hero-loaded .hero-title  { opacity:1; transform:none; transition-delay:0.25s; }
-.hero-loaded .hero-subtitle{ opacity:1; transform:none; transition-delay:0.4s; }
-.hero-loaded .hero-actions { opacity:1; transform:none; transition-delay:0.55s; }
+.hero-loaded .hero-title  { opacity:1; transform:none; transition-delay:0.15s; }
+.hero-loaded .hero-subtitle{ opacity:1; transform:none; transition-delay:0.3s; }
+.hero-loaded .hero-actions { opacity:1; transform:none; transition-delay:0.45s; }
 
 
 /* ── Structural Balance Elements ────────────────── */
@@ -171,8 +170,8 @@
   }
 
   .hero-content {
-    padding-top: calc(var(--spacing-xxl) + 20px);
-    padding-bottom: 120px;
+    padding-top: calc(var(--spacing-xxl) * 2);
+    padding-bottom: calc(var(--spacing-xxl) * 1.5);
   }
 
   .hero-text-block {
@@ -187,27 +186,10 @@
     max-width: 100%;
   }
 
-  .hero-stats-inner {
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-  }
-
-  .hero-stat {
-    padding: 0 !important;
-    border: none !important;
-    min-width: 40%;
-  }
-
-  .scroll-hint { display: none; }
   .hero-breadcrumb { display: none; }
 }
 
 @media (max-width: 480px) {
-  .hero-content {
-    padding-bottom: 200px;
-  }
   .hero-actions { flex-direction: column; }
   .hero-actions a { text-align: center; width: 100%; }
-  .hero-stats-inner { justify-content: center; }
-  .hero-stat { min-width: 45%; }
 }
