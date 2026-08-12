@@ -1,13 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css';
-import heroBg from '../assets/hero_bg.png';
+import heroBg from '../assets/enhanced.png';
 
-const stats = [
-  { value: '150+', label: 'Projects Delivered' },
-  { value: '12+', label: 'Years of Excellence' },
-  { value: '98%', label: 'Client Satisfaction' },
-  { value: '35+', label: 'Awards Won' },
-];
+
 
 const Hero = () => {
   const ref = useRef(null);
@@ -23,49 +18,43 @@ const Hero = () => {
     <section ref={ref} className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
       <div className="hero-overlay"></div>
 
-      {/* Breadcrumb */}
-      <div className="hero-breadcrumb container">
-        <span className="caption" style={{ color: 'rgba(255,255,255,0.5)' }}>HOME / REAL ESTATE</span>
+      {/* Vertical Right Element */}
+      <div className="hero-vertical-accent">
+        <span className="caption">EST. 1995</span>
+        <span className="vertical-line"></span>
       </div>
 
       <div className="container hero-content">
         <div className="hero-text-block">
-          <span className="hero-label caption">Luxury Real Estate Development</span>
           <h1 className="hero-title display-large">
             Where Excellence <br />
             Has An <em>Address,</em> <br />
-            And Investment Is Secure.
+            And Every Detail Matters.
           </h1>
           <p className="hero-subtitle body-large">
-            Tharaa crafts timeless, luxurious spaces that redefine modern living — blending artistry with precision engineering.
+            Crafting timeless spaces that redefine modern living.
           </p>
           <div className="hero-actions">
             <a href="#projects" className="btn-primary" id="hero-portfolio-btn">
               View Portfolio
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-            <a href="#contact" className="btn-secondary" id="hero-contact-btn">
-              Get in Touch
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Stats Bar */}
-      <div className="hero-stats">
-        <div className="container hero-stats-inner">
-          {stats.map((stat, i) => (
-            <div key={i} className="hero-stat">
-              <span className="stat-value">{stat.value}</span>
-              <span className="stat-label caption">{stat.label}</span>
-            </div>
-          ))}
-        </div>
+      {/* Bottom Trust Signal */}
+      <div className="hero-trust-signal">
+        <span className="trust-line"></span>
+        <span className="caption">31+ YEARS OF EXCELLENCE</span>
       </div>
 
-      {/* Scroll Hint */}
-      <div className="scroll-hint" aria-hidden="true">
-        <div className="scroll-dot"></div>
+      {/* Centered Scroll Hint */}
+      <div className="scroll-indicator" aria-hidden="true">
+        <span className="caption" style={{ letterSpacing: '2px', opacity: 0.6 }}>SCROLL</span>
+        <div className="scroll-hint">
+          <div className="scroll-dot"></div>
+        </div>
       </div>
     </section>
   );

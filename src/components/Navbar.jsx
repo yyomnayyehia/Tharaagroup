@@ -16,7 +16,7 @@ const Navbar = ({ forceDark = false }) => {
       setScrolled(window.scrollY > 60);
 
       if (!isHome) return;
-      const sections = ['services', 'projects', 'testimonials', 'contact'];
+      const sections = ['about', 'services', 'projects', 'testimonials', 'contact'];
       const current = sections.find((id) => {
         const el = document.getElementById(id);
         if (!el) return false;
@@ -47,6 +47,7 @@ const Navbar = ({ forceDark = false }) => {
   };
 
   const navLinks = [
+    { href: 'about',         label: 'About Us',      id: 'about' },
     { href: 'services',      label: 'Services',      id: 'services' },
     { href: 'projects',      label: 'Portfolio',     id: 'projects' },
     { href: 'testimonials',  label: 'Testimonials',  id: 'testimonials' },

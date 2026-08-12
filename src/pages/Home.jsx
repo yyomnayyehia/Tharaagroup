@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import ProjectGallery from '../components/ProjectGallery';
 import Testimonials from '../components/Testimonials';
@@ -28,6 +29,7 @@ const Home = () => {
       <Navbar />
       <main>
         <Hero />
+        <AboutUs />
         <Services />
         <ProjectGallery />
         <Testimonials />

@@ -3,15 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import './ProjectGallery.css';
 import { allProjects, categories } from '../data/projects';
 
-// Show only the first 3 on the homepage
-const PREVIEW_COUNT = 3;
+// Show 9 items on the homepage grid
+const PREVIEW_COUNT = 9;
 
 const ProjectGallery = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('ALL');
   const navigate = useNavigate();
 
   const filtered =
-    activeFilter === 'All'
+    activeFilter === 'ALL'
       ? allProjects.slice(0, PREVIEW_COUNT)
       : allProjects.filter((p) => p.category === activeFilter).slice(0, PREVIEW_COUNT);
 
