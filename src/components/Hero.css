@@ -237,11 +237,20 @@
   }
 
   .scroll-indicator {
-    display: none;
+    display: flex;
+    bottom: 24px;
+    transform: translateX(-50%) scale(0.85);
   }
 
   .hero-trust-signal {
-    display: none;
+    display: flex;
+    bottom: auto;
+    top: 110px;
+    left: var(--spacing-md);
+  }
+
+  .hero-trust-signal .trust-line {
+    width: 24px;
   }
 
   .hero-vertical-accent {
