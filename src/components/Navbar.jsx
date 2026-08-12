@@ -47,10 +47,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { href: 'about',         label: 'About Us',      id: 'about' },
-    { href: 'services',      label: 'Services',      id: 'services' },
-    { href: 'projects',      label: 'Portfolio',     id: 'projects' },
-    { href: 'process',       label: 'Process',       id: 'process' },
+    { href: 'about', label: 'About Us', id: 'about' },
+    { href: 'services', label: 'Services', id: 'services' },
+    { href: 'projects', label: 'Portfolio', id: 'projects' },
+    { href: 'process', label: 'Process', id: 'process' },
   ];
 
   const isDark = scrolled || !isHome;

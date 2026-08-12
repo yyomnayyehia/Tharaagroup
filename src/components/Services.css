@@ -16,7 +16,7 @@
 }
 
 .services-intro {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
   max-width: 520px;
   margin: 0 auto;
   margin-top: calc(-1 * var(--spacing-md));
@@ -32,11 +32,14 @@
 .service-row.image-left {
   direction: ltr;
 }
+
 .service-row.image-right {
   direction: rtl;
 }
-.service-row.image-right > * {
-  direction: ltr; /* reset children */
+
+.service-row.image-right>* {
+  direction: ltr;
+  /* reset children */
 }
 
 /* ── Image Column ────────────────────────────── */
@@ -57,7 +60,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.8s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-img-col:hover .service-img {
@@ -67,16 +70,20 @@
 /* Gold accent corner */
 .service-img-accent {
   position: absolute;
-  bottom: -2px; right: -2px;
-  width: 80px; height: 80px;
+  bottom: -2px;
+  right: -2px;
+  width: 80px;
+  height: 80px;
   border-right: 4px solid var(--color-accent);
   border-bottom: 4px solid var(--color-accent);
   pointer-events: none;
 }
 
 .service-row.image-right .service-img-accent {
-  right: auto; left: -2px;
-  border-right: none; border-left: 4px solid var(--color-accent);
+  right: auto;
+  left: -2px;
+  border-right: none;
+  border-left: 4px solid var(--color-accent);
 }
 
 /* ── Text Column ─────────────────────────────── */
@@ -110,7 +117,7 @@
 }
 
 .service-desc {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
   margin-top: calc(-1 * var(--spacing-md));
   margin-bottom: var(--spacing-lg);
@@ -147,6 +154,7 @@
 
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 900px) {
+
   .service-row,
   .service-row.image-right {
     grid-template-columns: 1fr;
