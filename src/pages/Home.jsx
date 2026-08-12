@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import ProjectGallery from '../components/ProjectGallery';
-import Testimonials from '../components/Testimonials';
+import Process from '../components/Process';
 
 const Home = () => {
   const { hash } = useLocation();
@@ -28,7 +28,7 @@ const Home = () => {
       <AboutUs />
       <Services />
       <ProjectGallery />
-      <Testimonials />
+      <Process />
     </div>
   );
 };

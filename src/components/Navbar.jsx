@@ -50,7 +50,7 @@ const Navbar = () => {
     { href: 'about',         label: 'About Us',      id: 'about' },
     { href: 'services',      label: 'Services',      id: 'services' },
     { href: 'projects',      label: 'Portfolio',     id: 'projects' },
-    { href: 'testimonials',  label: 'Testimonials',  id: 'testimonials' },
+    { href: 'process',       label: 'Process',       id: 'process' },
   ];
 
   const isDark = scrolled || !isHome;

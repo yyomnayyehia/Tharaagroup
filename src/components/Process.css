@@ -1,0 +1,113 @@
+.process-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-primary);
+}
+
+.process-section .section-title {
+  color: var(--color-white);
+}
+
+.process-intro {
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xxl);
+}
+
+.process-timeline-container {
+  position: relative;
+}
+
+.process-timeline-line {
+  position: absolute;
+  top: 39px; /* Exactly centers the 2px line within the 80px icon wrapper (40px - 1px) */
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-image: linear-gradient(to right, var(--color-accent) 50%, transparent 50%);
+  background-size: 16px 2px;
+  background-repeat: repeat-x;
+  background-color: transparent;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  position: relative;
+  z-index: 2;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.process-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.process-step:hover .process-icon-wrapper {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+}
+
+.process-step-title {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-xs);
+  font-size: 18px;
+}
+
+.process-step-desc {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  padding: 0 var(--spacing-sm);
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .process-timeline-line {
+    display: none;
+  }
+  
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .process-step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .process-icon-wrapper {
+    margin-bottom: 0;
+    margin-right: var(--spacing-lg);
+    flex-shrink: 0;
+  }
+  
+  .process-step-title {
+    margin-top: 12px;
+  }
+  
+  .process-step-desc {
+    padding: 0;
+  }
+}
